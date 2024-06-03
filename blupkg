@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+
+"""
+blupkg is a Bluespec package manager, attempting to emulate Go and Rust management, written in pure zero-dependency Python
+"""
+
+import sys
+
+if sys.version_info < (3, 11):
+    raise RuntimeError(f"blupkg requires Python 3.11+")
+
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser("blupkg", description=__doc__)
+    subparsers = parser.add_subparsers()
+
+    init = subparsers.add_parser("init")
+
+    add = subparsers.add_parser("add")
+
+    update = subparsers.add_parser("update")
+
+    build = subparsers.add_parser("build")
+
+    run = subparsers.add_parser("run")
+
+
+if __name__ == '__main__':
+    main()

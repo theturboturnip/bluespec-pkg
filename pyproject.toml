@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "blupkg"
+version = "0.1.0"
+description = "Bluespec package manager, attempting to emulate Go and Rust management, written in pure zero-dependency Python"
+authors = ["Samuel Stark <sws35@cam.ac.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.10.0"
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
